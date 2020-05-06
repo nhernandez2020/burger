@@ -1,0 +1,73 @@
+html {
+    background: radial-gradient(#350061, #621fa1, #8c32c0, #f06bfc);
+}
+
+body {
+    font-family: sans-serif;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: #014e08;
+    text-shadow: 2px 2px 3px #fc4fba;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+button {
+    background-color: #366dad;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+img {
+    height: 75px;
+}
+
+.container {
+    padding-top: 10%;
+    margin: auto;
+    width: 60%;
+    height: 90vh;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
+
+.create-burger {
+    text-align: center;
+}
+
+#burgerImg {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    .flex-container {
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .flex-container>div {
+        align-self: center;
+    }
+}

@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Burgers <img src="/assets/images/burger.png" alt="burger"></h1>
+    <div class="flex-container">
+        <div>
+            <h2>Burgers to Eat</h2>
+            <ul id="available-burgers">
+                {{#each burger}}
+                {{#unless devoured}}
+                {{>burgers/burger_block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            <h2>Devoured Burgers</h2>
+            <ul id="eaten-burgers">
+                {{#each burger}}
+                {{#if devoured}}
+                {{>burgers/burger_block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <form class="create-burger">
+        <h2>Add Burger</h2>
+
+        <div class="form-group">
+            <label for="burger">Burger Name:</label>
+            <input type="text" id="burger" name="name">
+        </div>
+
+        <button type="submit">Add Burger</button>
+
+    </form>
+</div>
