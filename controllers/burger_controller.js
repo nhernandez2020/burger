@@ -2,6 +2,8 @@ var db = require("../models");
 module.exports = function (app) {
     app.get("/", (req, res) => {
         db.Burger.findAll({}).then(burger => {
+            console.log( "burger home route",burger)
+
             res.render("home", {
                 burger: burger,
             });
@@ -11,7 +13,9 @@ module.exports = function (app) {
     app.post("/api/burgers", (req, res) => {
         db.Burger.create({
             burger_name: req.body.burger_name,
+            
         }).then(function (burger) {
+            console.log ("burger - cereate route", burger)
             res.json(burger);
         });
     });
@@ -25,6 +29,7 @@ module.exports = function (app) {
                 },
             })
             .then(function (data) {
+                console.log("data", data)
                 res.json(data);
             })
             .catch(function (err) {

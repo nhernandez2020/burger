@@ -11,7 +11,7 @@ $(function () {
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
-            data: devouredState
+            data: true
         }).then(function () {
             console.log("changed devoured to", isDevoured);
             location.reload();
@@ -26,7 +26,7 @@ $(function () {
                 .val()
                 .trim(),
         };
-
+        console.log("New Burger",newBurger)
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger

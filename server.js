@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8888;
 
 const db = require("./models");
 
-app.use(express.static("assets"));
+app.use(express.static("public"));
 app.use(express.urlencoded({
     extended: true
 }));
